@@ -8,7 +8,7 @@ class ButtonGroup extends React.Component {
   }
   onclickbtn = (index) => {
     const clickedList = this.state.clickedList;
-    clickedList[index]=!clickedList[index]
+    clickedList[index] = !clickedList[index]
     this.setState({ clickedList: clickedList })
   }
   render() {
@@ -26,26 +26,34 @@ class ButtonGroup extends React.Component {
   }
 }
 
+class ErrorBoundary extends React.Component {
+  componentDidCatch() {
+
+  }
+}
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <ErrorBoundary>
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
         Hello world
         <ButtonGroup buttons={[0, 1, 2]}></ButtonGroup>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+          <p>
+            Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React
         </a>
-      </header>
-    </div>
+        </header>
+      </div>
+    </ErrorBoundary>
   );
 }
 
