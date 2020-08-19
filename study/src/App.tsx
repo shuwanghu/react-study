@@ -8,6 +8,8 @@ import TestContext from "./testContext";
 
 import EffectTest from "./practice/Effect/Effect";
 import EffectRefTest from "./practice/Effect/Effect-Ref";
+import EffectReducerTest from "./practice/Effect/Effect-Reducer";
+
 function App() {
   return (
     <div className="App">
@@ -15,7 +17,7 @@ function App() {
         <ContextTest></ContextTest>
       </TestContext.Provider> */}
 
-      <EffectTest></EffectTest>
+      <EffectReducerTest></EffectReducerTest>
     </div>
   );
 }

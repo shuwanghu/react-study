@@ -11,13 +11,7 @@ export default function REFTest() {
   }, [count]);
   return (
     <div>
-      <button
-        onClick={() => {
-          setCount(count + 1);
-        }}
-      >
-        add
-      </button>
+      <button onClick={() => setCount(count + 1)}>add</button>
       {count}
     </div>
   );
