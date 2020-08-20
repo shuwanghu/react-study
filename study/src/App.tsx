@@ -9,6 +9,7 @@ import TestContext from "./testContext";
 import EffectTest from "./practice/Effect/Effect";
 import EffectRefTest from "./practice/Effect/Effect-Ref";
 import EffectReducerTest from "./practice/Effect/Effect-Reducer";
+import EffectCallbackTest from "./practice/Effect/Effect-Callback/Effect-Callback";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
         <ContextTest></ContextTest>
       </TestContext.Provider> */}
 
-      <EffectReducerTest></EffectReducerTest>
+      <EffectCallbackTest></EffectCallbackTest>
     </div>
   );
 }

@@ -14,9 +14,7 @@ function reducer(state: { count: number }, action: "increment" | "decrement") {
 export default function REFTest() {
   const [state, dispatch] = useReducer(reducer, initialState);
   useEffect(() => {
-    setInterval(() => {
-      dispatch("increment");
-    }, 1000);
+    setInterval(() => dispatch("increment"), 1000);
   }, []);
 
   return <div>{state.count}</div>;
