@@ -1,4 +1,6 @@
-import { observable, action } from "mobx";
+import { observable, action, autorun } from "mobx";
+import { MobXProviderContext } from "mobx-react";
+import { useContext } from "react";
 
 const appState = observable({
   time: 0,
@@ -7,12 +9,16 @@ const appState = observable({
   }),
 });
 
-// define action
+// // define action
 setInterval(
   action(() => {
     appState.time += 1;
   }),
   1000
 );
+
+autorun(()=>{
+  console.log('auto run',appState.time);
+})
 
 export default appState;
